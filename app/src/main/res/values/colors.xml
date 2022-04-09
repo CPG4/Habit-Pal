@@ -4,6 +4,10 @@
     <color name="colorPrimaryDark">#014421</color>
     <color name="colorPrimaryLight">#82c22e</color>
     <color name="colorAccent">#F9EB38</color>
+    <color name="colorAccentDark">#C6B805</color>
     <color name="colorAccentSecondary">#F87C3C</color>
+    <color name="colorAccentSecondaryDark">#C54909</color>
     <color name="colorText">#FDFEFD</color>
+    <color name="colorSettings">#B6B6B6</color>
+    <color name="colorSettingsDark">#838383</color>
 </resources>

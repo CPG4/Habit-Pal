@@ -63,7 +63,7 @@
         android:fontFamily="cursive"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:text="Type"
+        android:text="I have a habit to..."
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorText"
         android:textSize="24sp"
@@ -129,7 +129,32 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_add_bg"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="@color/colorAccentSecondaryDark"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="@id/text_description"
+        app:layout_constraintStart_toStartOf="@id/text_description"
+        app:layout_constraintTop_toTopOf="@+id/btn_add">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nova_round"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:textAlignment="gravity"
+            android:textAllCaps="true"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_add"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:layout_marginTop="50dp"

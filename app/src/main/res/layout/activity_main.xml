@@ -30,6 +30,32 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/btn_signup_bg"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="27dp"
+        app:cardBackgroundColor="@color/colorAccentSecondaryDark"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_or"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintStart_toStartOf="@+id/title">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nova_round"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:textAlignment="gravity"
+            android:textAllCaps="true"
+            android:textColor="@color/colorText"
+            android:textColorLink="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/btn_signup"
         android:layout_width="0dp"
         android:layout_height="75dp"
@@ -74,6 +100,31 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_login"
         app:layout_constraintEnd_toEndOf="@+id/btn_signup"
         app:layout_constraintStart_toStartOf="@+id/btn_signup" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_login_bg"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="95dp"
+        app:cardBackgroundColor="@color/colorAccentDark"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintStart_toStartOf="@+id/title">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nova_round"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:textAlignment="gravity"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/btn_login"
