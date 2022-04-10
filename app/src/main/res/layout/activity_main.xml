@@ -10,10 +10,8 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/_200sdp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
         android:fontFamily="cursive"
         android:letterSpacing="0.1"
         android:lineSpacingExtra="12sp"
@@ -32,13 +30,13 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/btn_signup_bg"
         android:layout_width="0dp"
-        android:layout_height="75dp"
-        android:layout_marginBottom="27dp"
+        android:layout_height="@dimen/_57sdp"
+        android:layout_marginTop="5dp"
         app:cardBackgroundColor="@color/colorAccentSecondaryDark"
         app:cardCornerRadius="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/text_or"
-        app:layout_constraintEnd_toEndOf="@+id/title"
-        app:layout_constraintStart_toStartOf="@+id/title">
+        app:layout_constraintEnd_toEndOf="@+id/btn_signup"
+        app:layout_constraintStart_toStartOf="@+id/btn_signup"
+        app:layout_constraintTop_toTopOf="@+id/btn_signup">
 
         <TextView
             android:layout_width="match_parent"
@@ -47,6 +45,7 @@
             android:fontFamily="@font/nova_round"
             android:gravity="center"
             android:letterSpacing="0.05"
+            android:text="@string/sign_up"
             android:textAlignment="gravity"
             android:textAllCaps="true"
             android:textColor="@color/colorText"
@@ -55,16 +54,19 @@
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
+    <com.group4.habitpal.CustomAppButton
         android:id="@+id/btn_signup"
         android:layout_width="0dp"
-        android:layout_height="75dp"
-        android:layout_marginBottom="32dp"
+        android:layout_height="@dimen/_57sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:tag="@string/sign_up"
         app:cardBackgroundColor="@color/colorAccentSecondary"
         app:cardCornerRadius="30dp"
         app:layout_constraintBottom_toTopOf="@+id/text_or"
-        app:layout_constraintEnd_toEndOf="@+id/title"
-        app:layout_constraintStart_toStartOf="@+id/title">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/text_signup"
@@ -81,13 +83,13 @@
             android:textColorLink="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+    </com.group4.habitpal.CustomAppButton>
 
     <TextView
         android:id="@+id/text_or"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="@dimen/_25sdp"
         android:fontFamily="@font/nova_round"
         android:gravity="center"
         android:letterSpacing="0.05"
@@ -104,13 +106,13 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/btn_login_bg"
         android:layout_width="0dp"
-        android:layout_height="75dp"
-        android:layout_marginBottom="95dp"
+        android:layout_height="@dimen/_57sdp"
+        android:layout_marginTop="5dp"
         app:cardBackgroundColor="@color/colorAccentDark"
         app:cardCornerRadius="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/title"
-        app:layout_constraintStart_toStartOf="@+id/title">
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toTopOf="@+id/btn_login">
 
         <TextView
             android:layout_width="match_parent"
@@ -119,6 +121,7 @@
             android:fontFamily="@font/nova_round"
             android:gravity="center"
             android:letterSpacing="0.05"
+            android:text="@string/log_in"
             android:textAlignment="gravity"
             android:textAllCaps="true"
             android:textColor="@color/colorPrimaryDark"
@@ -126,16 +129,17 @@
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
+    <com.group4.habitpal.CustomAppButton
         android:id="@+id/btn_login"
         android:layout_width="0dp"
-        android:layout_height="75dp"
-        android:layout_marginBottom="100dp"
+        android:layout_height="@dimen/_57sdp"
+        android:layout_marginBottom="@dimen/_75sdp"
+        android:tag="@string/log_in"
         app:cardBackgroundColor="@color/colorAccent"
         app:cardCornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/title"
-        app:layout_constraintStart_toStartOf="@+id/title">
+        app:layout_constraintEnd_toEndOf="@id/btn_signup"
+        app:layout_constraintStart_toStartOf="@id/btn_signup">
 
         <TextView
             android:id="@+id/text_login"
@@ -151,6 +155,6 @@
             android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp"
             android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+    </com.group4.habitpal.CustomAppButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

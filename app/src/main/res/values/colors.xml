@@ -7,6 +7,7 @@
     <color name="colorAccentDark">#C6B805</color>
     <color name="colorAccentSecondary">#F87C3C</color>
     <color name="colorAccentSecondaryDark">#C54909</color>
+    <color name="colorTextHighlight">#88F87C3C</color>
     <color name="colorText">#FDFEFD</color>
     <color name="colorSettings">#B6B6B6</color>
     <color name="colorSettingsDark">#838383</color>

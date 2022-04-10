@@ -12,13 +12,13 @@
         android:id="@+id/text_language"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_110sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
         android:fontFamily="cursive"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:text="Language"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:text="@string/language"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorText"
         android:textSize="24sp"
@@ -30,8 +30,8 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/btn_form"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_5sdp"
         app:cardBackgroundColor="#EDEDED"
         app:cardCornerRadius="30dp"
         app:cardElevation="0dp"
@@ -46,8 +46,8 @@
             android:background="#00FFFFFF"
             android:entries="@array/languages"
             android:gravity="center"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
             android:spinnerMode="dropdown" />
     </androidx.cardview.widget.CardView>
 
@@ -55,25 +55,23 @@
         android:id="@+id/text_notifications"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:fontFamily="cursive"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:text="Notifications"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:text="@string/notifications"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorText"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/text_language"
+        app:layout_constraintStart_toStartOf="@+id/text_language"
         app:layout_constraintTop_toBottomOf="@+id/btn_form" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/btn_notifications"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/_50sdp"
         android:layout_marginTop="8dp"
         app:cardBackgroundColor="#EDEDED"
         app:cardCornerRadius="30dp"
@@ -89,26 +87,26 @@
             android:background="#00FFFFFF"
             android:entries="@array/notification_settings"
             android:gravity="center"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
             android:spinnerMode="dropdown" />
     </androidx.cardview.widget.CardView>
 
     <LinearLayout
-        android:id="@+id/header_habitlist_bg"
+        android:id="@+id/termsprivacy_bg_container"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/_57sdp"
         android:layout_marginTop="5dp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/btn_notifications"
-        app:layout_constraintStart_toStartOf="@+id/btn_notifications"
-        app:layout_constraintTop_toTopOf="@+id/header_habitlist">
+        app:layout_constraintEnd_toEndOf="@id/termsprivacy_container"
+        app:layout_constraintStart_toStartOf="@id/termsprivacy_container"
+        app:layout_constraintTop_toTopOf="@id/termsprivacy_container">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/btn_terms_bg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="@dimen/_7sdp"
             android:layout_weight="1"
             app:cardCornerRadius="30dp">
 
@@ -118,6 +116,7 @@
                 android:background="@color/colorAccentDark"
                 android:fontFamily="@font/nova_round"
                 android:gravity="center"
+                android:text="@string/terms"
                 android:textAllCaps="true"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
@@ -128,7 +127,7 @@
             android:id="@+id/btn_privacy_bg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="@dimen/_7sdp"
             android:layout_weight="1"
             app:cardCornerRadius="30dp">
 
@@ -138,6 +137,7 @@
                 android:background="@color/colorAccentSecondaryDark"
                 android:fontFamily="@font/nova_round"
                 android:gravity="center"
+                android:text="@string/privacy"
                 android:textAllCaps="true"
                 android:textColor="@color/colorText"
                 android:textSize="18sp"
@@ -147,21 +147,22 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/header_habitlist"
+        android:id="@+id/termsprivacy_container"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="@dimen/_57sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/btn_notifications"
         app:layout_constraintStart_toStartOf="@+id/btn_notifications"
         app:layout_constraintTop_toBottomOf="@+id/btn_notifications">
 
-        <androidx.cardview.widget.CardView
+        <com.group4.habitpal.CustomAppButton
             android:id="@+id/btn_terms"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="@dimen/_7sdp"
             android:layout_weight="1"
+            android:tag="@string/terms"
             app:cardCornerRadius="30dp">
 
             <TextView
@@ -171,19 +172,20 @@
                 android:background="@color/colorAccent"
                 android:fontFamily="@font/nova_round"
                 android:gravity="center"
-                android:text="Terms"
+                android:text="@string/terms"
                 android:textAllCaps="true"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-        </androidx.cardview.widget.CardView>
+        </com.group4.habitpal.CustomAppButton>
 
-        <androidx.cardview.widget.CardView
+        <com.group4.habitpal.CustomAppButton
             android:id="@+id/btn_privacy"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="@dimen/_7sdp"
             android:layout_weight="1"
+            android:tag="@string/privacy"
             app:cardCornerRadius="30dp">
 
             <TextView
@@ -193,19 +195,19 @@
                 android:background="@color/colorAccentSecondary"
                 android:fontFamily="@font/nova_round"
                 android:gravity="center"
-                android:text="Privacy"
+                android:text="@string/privacy"
                 android:textAllCaps="true"
                 android:textColor="@color/colorText"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-        </androidx.cardview.widget.CardView>
+        </com.group4.habitpal.CustomAppButton>
 
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/btn_logout_bg"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/_57sdp"
         android:layout_marginTop="5dp"
         android:layout_weight="1"
         app:cardCornerRadius="30dp"
@@ -219,23 +221,24 @@
             android:background="#B90202"
             android:fontFamily="@font/nova_round"
             android:gravity="center"
-            android:text="Log Out"
+            android:text="@string/log_out"
             android:textAllCaps="true"
             android:textColor="@color/colorText"
             android:textSize="18sp"
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
+    <com.group4.habitpal.CustomAppButton
         android:id="@+id/btn_logout"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="@dimen/_57sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:layout_weight="1"
+        android:tag="@string/log_out"
         app:cardCornerRadius="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/header_habitlist"
-        app:layout_constraintStart_toStartOf="@+id/header_habitlist_bg"
-        app:layout_constraintTop_toBottomOf="@+id/header_habitlist_bg">
+        app:layout_constraintEnd_toEndOf="@id/termsprivacy_container"
+        app:layout_constraintStart_toStartOf="@id/termsprivacy_container"
+        app:layout_constraintTop_toBottomOf="@id/termsprivacy_container">
 
         <TextView
             android:id="@+id/text_logout"
@@ -244,11 +247,11 @@
             android:background="#EC2525"
             android:fontFamily="@font/nova_round"
             android:gravity="center"
-            android:text="Log Out"
+            android:text="@string/log_out"
             android:textAllCaps="true"
             android:textColor="@color/colorText"
             android:textSize="18sp"
             android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+    </com.group4.habitpal.CustomAppButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,12 +12,12 @@
         android:id="@+id/text_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_52sdp"
+        android:layout_marginRight="@dimen/_24sdp"
         android:fontFamily="cursive"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
         android:text="@string/name"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorText"
@@ -30,8 +30,8 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/name_container"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_6sdp"
         app:cardBackgroundColor="#EDEDED"
         app:cardCornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="@id/text_name"
@@ -45,13 +45,12 @@
             android:autofillHints=""
             android:background="#00FFFFFF"
             android:fontFamily="@font/nova_round"
-            android:hint="@string/name"
+            android:hint="@string/name_hint"
             android:inputType="textEmailAddress"
             android:letterSpacing="0.05"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
             android:textColor="@color/colorPrimaryDark"
-            android:textColorLink="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
@@ -60,10 +59,10 @@
         android:id="@+id/text_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/_12sdp"
         android:fontFamily="cursive"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
         android:text="@string/email"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorText"
@@ -76,8 +75,8 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/email_container"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_6sdp"
         app:cardBackgroundColor="#EDEDED"
         app:cardCornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="@id/text_email"
@@ -91,13 +90,12 @@
             android:autofillHints=""
             android:background="#00FFFFFF"
             android:fontFamily="@font/nova_round"
-            android:hint="@string/email"
+            android:hint="@string/email_hint"
             android:inputType="textEmailAddress"
             android:letterSpacing="0.05"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
             android:textColor="@color/colorPrimaryDark"
-            android:textColorLink="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
@@ -106,10 +104,10 @@
         android:id="@+id/text_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/_12sdp"
         android:fontFamily="cursive"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
         android:text="@string/password"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorText"
@@ -122,8 +120,8 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/password_container"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_6sdp"
         app:cardBackgroundColor="#EDEDED"
         app:cardCornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="@id/text_email"
@@ -140,10 +138,9 @@
             android:hint="@string/password"
             android:inputType="textPassword"
             android:letterSpacing="0.05"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
             android:textColor="@color/colorPrimaryDark"
-            android:textColorLink="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
@@ -152,10 +149,10 @@
         android:id="@+id/text_dob"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/_12sdp"
         android:fontFamily="cursive"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
         android:text="@string/date_of_birth"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorText"
@@ -168,8 +165,8 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/dob_container"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_6sdp"
         app:cardBackgroundColor="#EDEDED"
         app:cardCornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="@id/text_email"
@@ -186,10 +183,9 @@
             android:hint="@string/date_hint"
             android:inputType="date"
             android:letterSpacing="0.05"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
             android:textColor="@color/colorPrimaryDark"
-            android:textColorLink="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
@@ -197,7 +193,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/btn_signup_bg"
         android:layout_width="0dp"
-        android:layout_height="75dp"
+        android:layout_height="@dimen/_57sdp"
         android:layout_marginTop="5dp"
         app:cardBackgroundColor="@color/colorAccentSecondaryDark"
         app:cardCornerRadius="30dp"
@@ -212,6 +208,7 @@
             android:fontFamily="@font/nova_round"
             android:gravity="center"
             android:letterSpacing="0.1"
+            android:text="@string/sign_up"
             android:textAlignment="gravity"
             android:textAllCaps="true"
             android:textColor="@color/colorText"
@@ -219,16 +216,17 @@
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
+    <com.group4.habitpal.CustomAppButton
         android:id="@+id/btn_signup"
         android:layout_width="0dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="50dp"
+        android:layout_height="@dimen/_57sdp"
+        android:layout_marginBottom="@dimen/_52sdp"
+        android:tag="@string/sign_up"
         app:cardBackgroundColor="@color/colorAccentSecondary"
         app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/text_email"
-        app:layout_constraintStart_toStartOf="@id/text_email"
-        app:layout_constraintTop_toBottomOf="@id/dob_container">
+        app:layout_constraintStart_toStartOf="@id/text_email">
 
         <TextView
             android:id="@+id/text_signup"
@@ -244,6 +242,6 @@
             android:textColor="@color/colorText"
             android:textSize="18sp"
             android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+    </com.group4.habitpal.CustomAppButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
