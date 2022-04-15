@@ -2,7 +2,175 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/myprofile_screen"
+    android:id="@+id/myprofile_screen_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity" />
+    tools:context=".activities.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/myprofile_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".activities.MainActivity">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/profile_pic_container"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:cardCornerRadius="999dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/profile_pic_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_yellow"
+                android:contentDescription="TODO"
+                android:padding="@dimen/_30sdp"
+                app:srcCompat="@drawable/ic_baseline_person_24" />
+
+            <ImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="TODO" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center"
+            android:shadowColor="@color/colorShadow"
+            android:shadowDy="10"
+            android:shadowRadius="10"
+            android:text="@string/name_hint"
+            android:textColor="@color/colorText"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="@+id/profile_pic_container"
+            app:layout_constraintStart_toStartOf="@+id/profile_pic_container"
+            app:layout_constraintTop_toBottomOf="@+id/profile_pic_container" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_editprofile_bg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="@id/btn_editprofile"
+            app:layout_constraintStart_toStartOf="@id/btn_editprofile"
+            app:layout_constraintTop_toTopOf="@id/btn_editprofile">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccentDark"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:text="@string/edit_profile"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <com.group4.habitpal.custom_views.CustomAppButton
+            android:id="@+id/btn_editprofile"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:tag="Edit Profile"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_name">
+
+            <TextView
+                android:id="@+id/text_editprofile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:tag="@string/edit_profile"
+                android:text="@string/edit_profile"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.group4.habitpal.custom_views.CustomAppButton>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_changepassword_bg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="@id/btn_changepassword"
+            app:layout_constraintStart_toStartOf="@id/btn_changepassword"
+            app:layout_constraintTop_toTopOf="@id/btn_changepassword">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorSettings"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:text="Change Password"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <com.group4.habitpal.custom_views.CustomAppButton
+            android:id="@+id/btn_changepassword"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:tag="Change Password"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_editprofile">
+
+            <TextView
+                android:id="@+id/text_changepassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorText"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:tag="@string/edit_profile"
+                android:text="Change Password"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.group4.habitpal.custom_views.CustomAppButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

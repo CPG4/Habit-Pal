@@ -1,13 +1,20 @@
 package com.group4.habitpal.activities
 
 import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
+import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.animation.doOnEnd
+import androidx.core.animation.doOnRepeat
+import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.group4.habitpal.R
@@ -24,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // removes focus from all EditText fields when the screen is
+        // touched outside of the keyboard and EditText fields
         findViewById<View>(R.id.main_screen).setOnClickListener { view ->
             view.clearFocus()
             hideKeyboard()
@@ -60,25 +69,49 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    /**
+     *
+     * Plays a slide in animation for the title and navigation bar.
+     *
+     * @author Sisiame B. Sakasamo
+     *
+     */
     private fun animateHeaderFooter() {
+
+        val animationDuration: Long = 1000
 
         findViewById<View>(R.id.title).translationY = -600f
         findViewById<View>(R.id.header_bg).translationY = -600f
         findViewById<View>(R.id.bottom_navigation_container).translationY = 600f
 
         ObjectAnimator.ofFloat(findViewById(R.id.title), "translationY", 0f).apply {
-            duration = 1000
+            duration = animationDuration
             start()
         }
 
         ObjectAnimator.ofFloat(findViewById(R.id.header_bg), "translationY", 0f).apply {
-            duration = 1000
+            duration = animationDuration
             start()
         }
 
         ObjectAnimator.ofFloat(findViewById(R.id.bottom_navigation_container), "translationY", 0f).apply {
-            duration = 1000
+            duration = animationDuration
             start()
+        }
+
+    }
+
+    private fun setInteractionDisabled(disabled : Boolean) {
+
+        if (disabled) {
+
+            window.setFlags(
+                WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE
+            )
+
+        } else {
+            window.clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE)
         }
 
     }
@@ -90,7 +123,6 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<CustomAppButton>(R.id.main_btn_back).setAction {
             replaceFragment(fragment)
-            hideBackButton()
         }
 
     }
@@ -107,12 +139,59 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    /**
+     *
+     * Replaces the fragment currently inflating the fragment container.
+     *
+     * Effectively switches the current screen, and animates a screen
+     * transition each time this operation is done.
+     *
+     * @param fragment the fragment replacing the current fragment
+     *
+     * @author Sisiame B. Sakasamo
+     *
+     */
     fun replaceFragment(fragment: Fragment) {
 
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.fragment_container, fragment)
-            .commit()
+        val animationDuration: Long = 750
+
+        // animates the fragment moving down then moving back up
+        ObjectAnimator.ofFloat(findViewById(R.id.fragment_container), "translationY", 50f).apply {
+            duration = animationDuration
+            repeatCount = 1
+            repeatMode = ValueAnimator.REVERSE
+            start()
+        }
+
+        // animates the fragment fading out then fading back in
+        ObjectAnimator.ofFloat(findViewById(R.id.fragment_container), "alpha", 0f).apply {
+            duration = animationDuration
+            repeatCount = 1
+            repeatMode = ValueAnimator.REVERSE
+
+            // disables user input once animation starts
+            setInteractionDisabled(true)
+
+            // switches fragment once the animation reverses
+            doOnRepeat {
+
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .commit()
+
+                hideBackButton()
+
+            }
+
+            // re-enables user input once animation ends
+            doOnEnd {
+                setInteractionDisabled(false)
+            }
+
+            start()
+
+        }
 
     }
 

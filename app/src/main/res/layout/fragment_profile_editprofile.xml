@@ -2,13 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/addhabit_screen_container"
+    android:id="@+id/editprofile_screen_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/addhabit_screen"
+        android:id="@+id/editprofile_screen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,11 +18,10 @@
         tools:context=".activities.MainActivity">
 
         <TextView
-            android:id="@+id/text_type"
+            android:id="@+id/text_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_24sdp"
-            android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginRight="@dimen/_24sdp"
             android:fontFamily="cursive"
             android:paddingStart="@dimen/_15sdp"
@@ -30,7 +29,7 @@
             android:shadowColor="@color/colorShadow"
             android:shadowDy="5"
             android:shadowRadius="5"
-            android:text="@string/habit_type_header"
+            android:text="@string/name"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/colorText"
             android:textSize="30sp"
@@ -39,62 +38,80 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/btn_form"
-            android:layout_width="@dimen/_120sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            app:cardBackgroundColor="@color/colorText"
-            app:cardCornerRadius="30dp"
-            app:cardElevation="10dp"
-            app:layout_constraintStart_toStartOf="@+id/text_type"
-            app:layout_constraintTop_toBottomOf="@+id/text_type">
-
-            <TextView
-                android:id="@+id/text_form"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/nova_round"
-                android:gravity="center"
-                android:letterSpacing="0.05"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:text="@string/form"
-                android:textAllCaps="true"
-                android:textColor="@color/colorTextDark"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/btn_quit"
-            android:layout_width="@dimen/_120sdp"
-            android:layout_height="@dimen/_50sdp"
-            app:cardBackgroundColor="#0082C22E"
+        <com.group4.habitpal.custom_views.CustomEditTextContainer
+            android:id="@+id/name_container"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_6sdp"
             app:cardCornerRadius="30dp"
             app:cardElevation="0dp"
-            app:layout_constraintEnd_toEndOf="@+id/text_type"
-            app:layout_constraintTop_toTopOf="@+id/btn_form">
+            app:layout_constraintEnd_toEndOf="@id/text_name"
+            app:layout_constraintStart_toStartOf="@id/text_name"
+            app:layout_constraintTop_toBottomOf="@id/text_name">
 
-            <TextView
-                android:id="@+id/text_quit"
+            <EditText
+                android:id="@+id/editprofile_field_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#00FFFFFF"
+                android:autofillHints=""
                 android:fontFamily="@font/nova_round"
-                android:gravity="center"
+                android:hint="@string/name_hint"
+                android:inputType="textPersonName"
                 android:letterSpacing="0.05"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:text="@string/quit"
-                android:textAllCaps="true"
-                android:textColor="@color/colorText"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-        </com.google.android.material.card.MaterialCardView>
+        </com.group4.habitpal.custom_views.CustomEditTextContainer>
 
         <TextView
-            android:id="@+id/text_description"
+            android:id="@+id/text_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="cursive"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:shadowColor="@color/colorShadow"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="@string/email"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorText"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/text_name"
+            app:layout_constraintRight_toRightOf="@id/text_name"
+            app:layout_constraintTop_toBottomOf="@+id/name_container" />
+
+        <com.group4.habitpal.custom_views.CustomEditTextContainer
+            android:id="@+id/email_container"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="@id/text_email"
+            app:layout_constraintStart_toStartOf="@id/text_email"
+            app:layout_constraintTop_toBottomOf="@id/text_email">
+
+            <EditText
+                android:id="@+id/editprofile_field_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints=""
+                android:fontFamily="@font/nova_round"
+                android:hint="@string/email_hint"
+                android:inputType="textEmailAddress"
+                android:letterSpacing="0.05"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.group4.habitpal.custom_views.CustomEditTextContainer>
+
+        <TextView
+            android:id="@+id/text_dob"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_20sdp"
@@ -104,53 +121,53 @@
             android:shadowColor="@color/colorShadow"
             android:shadowDy="5"
             android:shadowRadius="5"
-             android:text="@string/habit_description_header"
+            android:text="@string/date_of_birth"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/colorText"
             android:textSize="30sp"
             android:textStyle="bold"
-            app:layout_constraintLeft_toLeftOf="@id/text_type"
-            app:layout_constraintRight_toRightOf="@id/text_type"
-            app:layout_constraintTop_toBottomOf="@id/btn_form" />
+            app:layout_constraintLeft_toLeftOf="@id/text_email"
+            app:layout_constraintRight_toRightOf="@id/text_email"
+            app:layout_constraintTop_toBottomOf="@+id/email_container" />
 
         <com.group4.habitpal.custom_views.CustomEditTextContainer
-            android:id="@+id/description_container"
+            android:id="@+id/dob_container"
             android:layout_width="0dp"
-            android:layout_height="@dimen/_80sdp"
-            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_6sdp"
             app:cardCornerRadius="30dp"
             app:cardElevation="0dp"
-            app:layout_constraintEnd_toEndOf="@id/text_description"
-            app:layout_constraintStart_toStartOf="@id/text_description"
-            app:layout_constraintTop_toBottomOf="@id/text_description">
+            app:layout_constraintEnd_toEndOf="@id/text_email"
+            app:layout_constraintStart_toStartOf="@id/text_email"
+            app:layout_constraintTop_toBottomOf="@id/text_dob">
 
             <EditText
-                android:id="@+id/field_description"
+                android:id="@+id/editprofile_field_dob"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:autofillHints=""
                 android:fontFamily="@font/nova_round"
-                android:gravity="start"
-                android:hint="@string/habit_describe_hint"
-                android:inputType="textMultiLine"
+                android:hint="@string/date_hint"
+                android:inputType="date"
                 android:letterSpacing="0.05"
-                android:maxLength="300"
-                android:padding="@dimen/_15sdp"
+                android:maxLength="10"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </com.group4.habitpal.custom_views.CustomEditTextContainer>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/btn_add_bg"
+            android:id="@+id/btn_applychanges_bg"
             android:layout_width="0dp"
             android:layout_height="@dimen/_57sdp"
             android:layout_marginTop="5dp"
             app:cardBackgroundColor="@color/colorAccentDark"
             app:cardCornerRadius="30dp"
             app:cardElevation="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/btn_add"
-            app:layout_constraintStart_toStartOf="@+id/btn_add"
-            app:layout_constraintTop_toTopOf="@+id/btn_add">
+            app:layout_constraintEnd_toEndOf="@id/btn_applychanges"
+            app:layout_constraintStart_toStartOf="@id/btn_applychanges"
+            app:layout_constraintTop_toTopOf="@id/btn_applychanges">
 
             <TextView
                 android:layout_width="match_parent"
@@ -159,7 +176,7 @@
                 android:fontFamily="@font/nova_round"
                 android:gravity="center"
                 android:letterSpacing="0.1"
-                android:text="@string/add_habit"
+                android:text="Apply Changes"
                 android:textAlignment="gravity"
                 android:textAllCaps="true"
                 android:textColor="@color/colorTextDark"
@@ -168,30 +185,29 @@
         </androidx.cardview.widget.CardView>
 
         <com.group4.habitpal.custom_views.CustomAppButton
-            android:id="@+id/btn_add"
+            android:id="@+id/btn_applychanges"
             android:layout_width="0dp"
             android:layout_height="@dimen/_57sdp"
             android:layout_marginTop="@dimen/_50sdp"
             android:layout_marginBottom="@dimen/_20sdp"
-            android:tag="@string/add_habit"
+            android:tag="Apply Changes"
             app:cardBackgroundColor="@color/colorAccent"
             app:cardCornerRadius="30dp"
             app:cardElevation="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/text_description"
-            app:layout_constraintStart_toStartOf="@id/text_description"
-            app:layout_constraintTop_toBottomOf="@+id/description_container">
+            app:layout_constraintEnd_toEndOf="@id/text_email"
+            app:layout_constraintStart_toStartOf="@id/text_email"
+            app:layout_constraintTop_toBottomOf="@+id/dob_container">
 
             <TextView
-                android:id="@+id/text_add"
+                android:id="@+id/text_applychanges"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:fontFamily="@font/nova_round"
                 android:gravity="center"
                 android:letterSpacing="0.1"
-                android:tag="@string/add_habit"
-                android:text="@string/add_habit"
+                android:text="Apply Changes"
                 android:textAlignment="gravity"
                 android:textAllCaps="true"
                 android:textColor="@color/colorTextDark"

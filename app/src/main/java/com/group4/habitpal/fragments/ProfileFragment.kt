@@ -34,7 +34,7 @@ class ProfileFragment : Fragment() {
         val btnPrivacy = requireActivity().findViewById<CustomAppButton>(R.id.btn_privacy)
 
         btnMyProfile.setAction {
-            mainActivity.replaceFragment(SettingsFragment())
+            mainActivity.replaceFragment(MyProfileFragment())
         }
 
         btnSettings.setAction {
@@ -42,21 +42,11 @@ class ProfileFragment : Fragment() {
         }
 
         btnTerms.setAction {
-            startActivity(
-                Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse("https://github.com/CPG4/Habit-Pal")
-                )
-            )
+            goToGithubPage()
         }
 
         btnPrivacy.setAction {
-            startActivity(
-                Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse("https://github.com/CPG4/Habit-Pal")
-                )
-            )
+            goToGithubPage()
         }
 
         btnLogOut.setAction {
@@ -65,5 +55,15 @@ class ProfileFragment : Fragment() {
 
     }
 
+    private fun goToGithubPage() {
+
+        startActivity(
+            Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://github.com/CPG4/Habit-Pal")
+            )
+        )
+
+    }
 
 }

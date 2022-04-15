@@ -33,6 +33,9 @@ class CustomAppButton : MaterialCardView {
     // if false, performClick is not called
     private var isActive: Boolean = false
 
+    // the action to be performed when performClick is called
+    // displays a toast with the button's tag by default if there
+    // is a tag defined
     var performAction: () -> Unit = fun() {
         if(this.tag != null) {
             Toast.makeText(context, this.tag.toString(), Toast.LENGTH_SHORT).show()
@@ -40,12 +43,14 @@ class CustomAppButton : MaterialCardView {
     }
 
     constructor(context: Context?) : super(context!!) {
+        // sets the button's border color
         strokeColor = resources.getColor(R.color.buttonColorOutline, null)
     }
 
     constructor(context: Context?, attrs: AttributeSet?) : super(
         context!!, attrs
     ) {
+        // sets the button's border color
         strokeColor = resources.getColor(R.color.buttonColorOutline, null)
     }
 
@@ -106,14 +111,44 @@ class CustomAppButton : MaterialCardView {
         return true
     }
 
+
+    /**
+     *
+     * Assigns an action to the button.
+     * The action is called whenever performClick is called.
+     *
+     * @param action the action being assigned to the button
+     *
+     * @author Sisiame B. Sakasamo
+     *
+     */
     fun setAction(action: () -> Unit) {
         performAction = action
     }
 
+    /**
+     *
+     * Checks if the user's finger has been moved outside of the
+     * button's action cancellation threshold.
+     *
+     * @param currentTouchX the x-coordinate of the current position of the user's finger on the screen
+     * @param currentTouchY the y-coordinate of the current position of the user's finger on the screen
+     *
+     * @author Sisiame B. Sakasamo
+     *
+     */
     private fun isOutsideOfCancelThreshold(currentTouchX: Float, currentTouchY: Float) : Boolean {
         return abs(touchX - currentTouchX) + abs(touchY - currentTouchY) > cancelActionThreshold
     }
 
+    /**
+     *
+     * Deactivates the button press and prevents onClick from being
+     * called.
+     *
+     * @author Sisiame B. Sakasamo
+     *
+     */
     private fun cancelAction() {
         isActive = false
         visibility = View.VISIBLE

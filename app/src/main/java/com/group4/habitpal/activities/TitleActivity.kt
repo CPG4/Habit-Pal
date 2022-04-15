@@ -45,6 +45,14 @@ class TitleActivity : AppCompatActivity() {
 
     }
 
+    /**
+     *
+     * Removes the current screen from view, shows the title
+     * screen, and hides the back button.
+     *
+     * @author Sisiame B. Sakasamo
+     *
+     */
     private fun showTitle() {
 
         supportFragmentManager
@@ -58,21 +66,52 @@ class TitleActivity : AppCompatActivity() {
 
     }
 
+    /**
+     *
+     * Hides the title screen and makes the back button visible.
+     *
+     * @author Sisiame B. Sakasamo
+     *
+     */
     private fun hideTitle() {
         findViewById<ConstraintLayout>(R.id.title).visibility = View.GONE
         showBackButton()
     }
 
+    /**
+     *
+     * Makes the back button visible.
+     *
+     * @author Sisiame B. Sakasamo
+     *
+     */
     private fun showBackButton() {
         findViewById<View>(R.id.title_btn_back).visibility = View.VISIBLE
         findViewById<View>(R.id.btn_back_bg).visibility = View.VISIBLE
     }
 
+    /**
+     *
+     * Hides the back button.
+     *
+     * @author Sisiame B. Sakasamo
+     *
+     */
     private fun hideBackButton() {
         findViewById<View>(R.id.title_btn_back).visibility = View.GONE
         findViewById<View>(R.id.btn_back_bg).visibility = View.GONE
     }
 
+    /**
+     *
+     * Hides the title screen and displays a new screen in its
+     * place.
+     *
+     * @param fragment the screen being displayed
+     *
+     * @author Sisiame B. Sakasamo
+     *
+     */
     private fun goToScreen(fragment: Fragment) {
 
         supportFragmentManager
@@ -86,6 +125,13 @@ class TitleActivity : AppCompatActivity() {
 
     }
 
+    /**
+     *
+     * Hides the on-screen keyboard.
+     *
+     * @author Sisiame B. Sakasamo
+     *
+     */
     private fun hideKeyboard() {
 
         val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -93,6 +139,13 @@ class TitleActivity : AppCompatActivity() {
 
     }
 
+    /**
+     *
+     * Moves to the home screen.
+     *
+     * @author Sisiame B. Sakasamo
+     *
+     */
     fun goToHomeScreen() {
         startActivity(Intent(this@TitleActivity, MainActivity::class.java))
         finish()
