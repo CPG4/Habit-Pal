@@ -78,6 +78,7 @@ Helps an individual track their progress towards breaking bad habits and/or form
 <img src="https://i.imgur.com/uDpWQs3.png" width=200> <img src="https://i.imgur.com/FZFYkcN.png" width=200> <img src="https://i.imgur.com/IaMSv0q.png" width=200> <img src="https://i.imgur.com/RvtD6I4.png" width=200> <img src="https://i.imgur.com/OQD4M5u.png" width=200> <img src="https://i.imgur.com/0FxdQve.png" width=200> <img src="https://i.imgur.com/FlYkOG2.png" width=200> <img src="https://i.imgur.com/lNVDxfY.png" width=200> <img src="https://i.imgur.com/6yIyao8.png" width=200> <img src="https://i.imgur.com/IndzoCi.png" width=200> <img src="https://i.imgur.com/2uckhVO.png" width=200>
 
 ## Interactive Prototypes
+<a href="https://youtube.com/shorts/pe__cLLI5xU">Week 6 Prototype</a>
 <a href="http://www.youtube.com/watch?v=Rb9FyHCTW9I">Week 7 Prototype</a>
 
 ## Schema
