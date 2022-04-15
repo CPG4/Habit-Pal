@@ -1,13 +1,26 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorControlActivated">@color/colorAccentSecondary</item>
-        <item name="android:textCursorDrawable">@drawable/orange_cursor</item>
+        <item name="colorControlActivated">@color/colorText</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
         <item name="android:textColorHighlight">@color/colorTextHighlight</item>
+        <item name="android:statusBarColor">@color/colorText</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:editTextBackground">@color/edittext_bg_color_state</item>
+        <item name="android:editTextColor">@color/edittext_text_color_state</item>
+        <item name="android:textColorHint">@color/edittext_hint_color_state</item>
+        <item name="android:fontFamily">@font/nova_round</item>
+        <item name="strokeColor">@color/colorText</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Widget.Custom.NavigationView" parent="Widget.Design.NavigationView">
+        <item name="itemIconTint">@color/colorTextDark</item>
+        <item name="itemBackground">@color/colorText</item>
     </style>
 
 </resources>

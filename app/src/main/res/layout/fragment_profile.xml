@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_screen_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".activities.MainActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_myprofile_bg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="@id/btn_myprofile"
+            app:layout_constraintStart_toStartOf="@id/btn_myprofile"
+            app:layout_constraintTop_toTopOf="@id/btn_myprofile">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorSettings"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:text="@string/my_profile"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <com.group4.habitpal.custom_views.CustomAppButton
+            android:id="@+id/btn_myprofile"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:tag="My Profile"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_myprofile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorText"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:text="@string/my_profile"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.group4.habitpal.custom_views.CustomAppButton>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_settings_bg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="@id/btn_settings"
+            app:layout_constraintStart_toStartOf="@id/btn_settings"
+            app:layout_constraintTop_toTopOf="@id/btn_settings">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorSettingsDark"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:text="@string/settings"
+                android:textAllCaps="true"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <com.group4.habitpal.custom_views.CustomAppButton
+            android:id="@+id/btn_settings"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:tag="@string/settings"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_myprofile">
+
+            <TextView
+                android:id="@+id/text_settings"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorSettings"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:text="@string/settings"
+                android:textAllCaps="true"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.group4.habitpal.custom_views.CustomAppButton>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_privacy_bg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_privacy"
+            app:layout_constraintStart_toStartOf="@+id/btn_privacy"
+            app:layout_constraintTop_toTopOf="@+id/btn_privacy">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccentSecondaryDark"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:text="@string/privacy"
+                android:textAllCaps="true"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <com.group4.habitpal.custom_views.CustomAppButton
+            android:id="@+id/btn_privacy"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:tag="@string/privacy"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="@id/btn_logout"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/btn_terms">
+
+            <TextView
+                android:id="@+id/text_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccentSecondary"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:text="@string/privacy"
+                android:textAllCaps="true"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.group4.habitpal.custom_views.CustomAppButton>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_terms_bg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_terms"
+            app:layout_constraintStart_toStartOf="@+id/btn_terms"
+            app:layout_constraintTop_toTopOf="@+id/btn_terms">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccentDark"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:text="@string/terms"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <com.group4.habitpal.custom_views.CustomAppButton
+            android:id="@+id/btn_terms"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:tag="@string/terms"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/btn_logout"
+            app:layout_constraintTop_toBottomOf="@+id/btn_settings_bg">
+
+            <TextView
+                android:id="@+id/text_terms"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:text="@string/terms"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.group4.habitpal.custom_views.CustomAppButton>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_logout_bg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_logout"
+            app:layout_constraintStart_toStartOf="@+id/btn_logout"
+            app:layout_constraintTop_toTopOf="@+id/btn_logout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#B90202"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:text="@string/log_out"
+                android:textAllCaps="true"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <com.group4.habitpal.custom_views.CustomAppButton
+            android:id="@+id/btn_logout"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:tag="@string/log_out"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_terms_bg">
+
+            <TextView
+                android:id="@+id/text_logout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EC2525"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:text="@string/log_out"
+                android:textAllCaps="true"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.group4.habitpal.custom_views.CustomAppButton>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

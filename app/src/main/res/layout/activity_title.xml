@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/title_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_primary"
+    tools:context=".activities.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".activities.MainActivity">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:lineSpacingExtra="12sp"
+            android:lines="2"
+            android:shadowColor="@color/colorShadow"
+            android:shadowDy="10"
+            android:shadowRadius="10"
+            android:text="@string/title"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorText"
+            android:textSize="100sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_signup"
+            app:layout_constraintEnd_toEndOf="@+id/btn_signup_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btn_signup_bg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_signup_bg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginTop="5dp"
+            app:cardBackgroundColor="@color/colorAccentDark"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_signup"
+            app:layout_constraintStart_toStartOf="@+id/btn_signup"
+            app:layout_constraintTop_toTopOf="@+id/btn_signup">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:letterSpacing="0.05"
+                android:text="@string/sign_up"
+                android:textAlignment="gravity"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextDark"
+                android:textColorLink="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <com.group4.habitpal.custom_views.CustomAppButton
+            android:id="@+id/btn_signup"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:tag="@string/sign_up"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/text_or"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/text_signup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:letterSpacing="0.05"
+                android:text="@string/sign_up"
+                android:textAlignment="gravity"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.group4.habitpal.custom_views.CustomAppButton>
+
+        <TextView
+            android:id="@+id/text_or"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:fontFamily="@font/nova_round"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="@string/or"
+            android:textAlignment="gravity"
+            android:textAllCaps="true"
+            android:textColor="@color/colorText"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_login"
+            app:layout_constraintEnd_toEndOf="@+id/btn_signup"
+            app:layout_constraintStart_toStartOf="@+id/btn_signup" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_login_bg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginTop="5dp"
+            app:cardBackgroundColor="@color/colorSettings"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_login"
+            app:layout_constraintStart_toStartOf="@+id/btn_login"
+            app:layout_constraintTop_toTopOf="@+id/btn_login">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:letterSpacing="0.05"
+                android:text="@string/log_in"
+                android:textAlignment="gravity"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <com.group4.habitpal.custom_views.CustomAppButton
+            android:id="@+id/btn_login"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_marginBottom="@dimen/_65sdp"
+            android:tag="@string/log_in"
+            app:cardBackgroundColor="@color/colorText"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/btn_signup"
+            app:layout_constraintStart_toStartOf="@id/btn_signup">
+
+            <TextView
+                android:id="@+id/text_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nova_round"
+                android:gravity="center"
+                android:letterSpacing="0.05"
+                android:text="@string/log_in"
+                android:textAlignment="gravity"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.group4.habitpal.custom_views.CustomAppButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_back_bg"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="@color/colorSettings"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="@id/btn_back"
+        app:layout_constraintStart_toStartOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="@id/btn_back">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="TODO"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorTextDark"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+    </androidx.cardview.widget.CardView>
+
+    <com.group4.habitpal.custom_views.CustomAppButton
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:tag="Back"
+        app:cardBackgroundColor="@color/colorText"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorTextDark"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+    </com.group4.habitpal.custom_views.CustomAppButton>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_back_bg">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

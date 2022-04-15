@@ -5,55 +5,55 @@
     android:id="@+id/signup_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <TextView
         android:id="@+id/text_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_24sdp"
-        android:layout_marginTop="@dimen/_52sdp"
+        android:layout_marginTop="@dimen/_30sdp"
         android:layout_marginRight="@dimen/_24sdp"
         android:fontFamily="cursive"
         android:paddingStart="@dimen/_15sdp"
         android:paddingEnd="@dimen/_15sdp"
+        android:shadowColor="@color/colorShadow"
+        android:shadowDy="5"
+        android:shadowRadius="5"
         android:text="@string/name"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorText"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/name_container"
         android:layout_width="0dp"
-        android:layout_height="@dimen/_50sdp"
+        android:layout_height="@dimen/_40sdp"
         android:layout_marginTop="@dimen/_6sdp"
-        app:cardBackgroundColor="#EDEDED"
         app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="@id/text_name"
         app:layout_constraintStart_toStartOf="@id/text_name"
         app:layout_constraintTop_toBottomOf="@id/text_name">
 
         <EditText
-            android:id="@+id/field_name"
+            android:id="@+id/signup_field_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:autofillHints=""
-            android:background="#00FFFFFF"
             android:fontFamily="@font/nova_round"
             android:hint="@string/name_hint"
             android:inputType="textEmailAddress"
             android:letterSpacing="0.05"
             android:paddingStart="@dimen/_15sdp"
             android:paddingEnd="@dimen/_15sdp"
-            android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp"
             android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
         android:id="@+id/text_email"
@@ -63,42 +63,43 @@
         android:fontFamily="cursive"
         android:paddingStart="@dimen/_15sdp"
         android:paddingEnd="@dimen/_15sdp"
+        android:shadowColor="@color/colorShadow"
+        android:shadowDy="5"
+        android:shadowRadius="5"
         android:text="@string/email"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorText"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="@id/text_name"
         app:layout_constraintRight_toRightOf="@id/text_name"
         app:layout_constraintTop_toBottomOf="@+id/name_container" />
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/email_container"
         android:layout_width="0dp"
-        android:layout_height="@dimen/_50sdp"
+        android:layout_height="@dimen/_40sdp"
         android:layout_marginTop="@dimen/_6sdp"
-        app:cardBackgroundColor="#EDEDED"
         app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="@id/text_email"
         app:layout_constraintStart_toStartOf="@id/text_email"
         app:layout_constraintTop_toBottomOf="@id/text_email">
 
         <EditText
-            android:id="@+id/field_email"
+            android:id="@+id/signup_field_email"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:autofillHints=""
-            android:background="#00FFFFFF"
             android:fontFamily="@font/nova_round"
             android:hint="@string/email_hint"
             android:inputType="textEmailAddress"
             android:letterSpacing="0.05"
             android:paddingStart="@dimen/_15sdp"
             android:paddingEnd="@dimen/_15sdp"
-            android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp"
             android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
         android:id="@+id/text_password"
@@ -108,42 +109,43 @@
         android:fontFamily="cursive"
         android:paddingStart="@dimen/_15sdp"
         android:paddingEnd="@dimen/_15sdp"
+        android:shadowColor="@color/colorShadow"
+        android:shadowDy="5"
+        android:shadowRadius="5"
         android:text="@string/password"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorText"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="@id/text_email"
         app:layout_constraintRight_toRightOf="@id/text_email"
         app:layout_constraintTop_toBottomOf="@+id/email_container" />
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/password_container"
         android:layout_width="0dp"
-        android:layout_height="@dimen/_50sdp"
+        android:layout_height="@dimen/_40sdp"
         android:layout_marginTop="@dimen/_6sdp"
-        app:cardBackgroundColor="#EDEDED"
         app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="@id/text_email"
         app:layout_constraintStart_toStartOf="@id/text_email"
         app:layout_constraintTop_toBottomOf="@+id/text_password">
 
         <EditText
-            android:id="@+id/field_password"
+            android:id="@+id/signup_field_password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:autofillHints=""
-            android:background="#00FFFFFF"
             android:fontFamily="@font/nova_round"
             android:hint="@string/password"
             android:inputType="textPassword"
             android:letterSpacing="0.05"
             android:paddingStart="@dimen/_15sdp"
             android:paddingEnd="@dimen/_15sdp"
-            android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp"
             android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
         android:id="@+id/text_dob"
@@ -153,53 +155,56 @@
         android:fontFamily="cursive"
         android:paddingStart="@dimen/_15sdp"
         android:paddingEnd="@dimen/_15sdp"
+        android:shadowColor="@color/colorShadow"
+        android:shadowDy="5"
+        android:shadowRadius="5"
         android:text="@string/date_of_birth"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorText"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="@id/text_email"
         app:layout_constraintRight_toRightOf="@id/text_email"
         app:layout_constraintTop_toBottomOf="@id/password_container" />
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/dob_container"
         android:layout_width="0dp"
-        android:layout_height="@dimen/_50sdp"
+        android:layout_height="@dimen/_40sdp"
         android:layout_marginTop="@dimen/_6sdp"
-        app:cardBackgroundColor="#EDEDED"
         app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="@id/text_email"
         app:layout_constraintStart_toStartOf="@id/text_email"
         app:layout_constraintTop_toBottomOf="@id/text_dob">
 
         <EditText
-            android:id="@+id/field_dob"
+            android:id="@+id/signup_field_dob"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:autofillHints=""
-            android:background="#00FFFFFF"
             android:fontFamily="@font/nova_round"
             android:hint="@string/date_hint"
             android:inputType="date"
             android:letterSpacing="0.05"
+            android:maxLength="10"
             android:paddingStart="@dimen/_15sdp"
             android:paddingEnd="@dimen/_15sdp"
-            android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp"
             android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/btn_signup_bg"
         android:layout_width="0dp"
         android:layout_height="@dimen/_57sdp"
         android:layout_marginTop="5dp"
-        app:cardBackgroundColor="@color/colorAccentSecondaryDark"
+        app:cardBackgroundColor="@color/colorAccentDark"
         app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="@id/text_email"
         app:layout_constraintStart_toStartOf="@id/text_email"
-        app:layout_constraintTop_toTopOf="@+id/btn_signup">
+        app:layout_constraintTop_toTopOf="@+id/btn_signup_frag">
 
         <TextView
             android:layout_width="match_parent"
@@ -211,19 +216,20 @@
             android:text="@string/sign_up"
             android:textAlignment="gravity"
             android:textAllCaps="true"
-            android:textColor="@color/colorText"
+            android:textColor="@color/colorTextDark"
             android:textSize="18sp"
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
-    <com.group4.habitpal.CustomAppButton
-        android:id="@+id/btn_signup"
+    <com.group4.habitpal.custom_views.CustomAppButton
+        android:id="@+id/btn_signup_frag"
         android:layout_width="0dp"
         android:layout_height="@dimen/_57sdp"
         android:layout_marginBottom="@dimen/_52sdp"
         android:tag="@string/sign_up"
-        app:cardBackgroundColor="@color/colorAccentSecondary"
+        app:cardBackgroundColor="@color/colorAccent"
         app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/text_email"
         app:layout_constraintStart_toStartOf="@id/text_email">
@@ -239,9 +245,9 @@
             android:text="@string/sign_up"
             android:textAlignment="gravity"
             android:textAllCaps="true"
-            android:textColor="@color/colorText"
+            android:textColor="@color/colorTextDark"
             android:textSize="18sp"
             android:textStyle="bold" />
-    </com.group4.habitpal.CustomAppButton>
+    </com.group4.habitpal.custom_views.CustomAppButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
