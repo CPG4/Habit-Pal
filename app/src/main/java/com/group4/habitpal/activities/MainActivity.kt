@@ -2,13 +2,16 @@ package com.group4.habitpal.activities
 
 import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.group4.habitpal.R
+import com.group4.habitpal.custom_views.CustomAppButton
 import com.group4.habitpal.fragments.*
 
 
@@ -20,6 +23,44 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        findViewById<View>(R.id.main_screen).setOnClickListener { view ->
+            view.clearFocus()
+            hideKeyboard()
+        }
+
+        animateHeaderFooter()
+        hideBackButton()
+
+        bottomNav = findViewById(R.id.bottom_navigation)
+
+        bottomNav.setOnItemSelectedListener { item ->
+
+            when(item.itemId) {
+
+                R.id.action_addhabit -> {
+                    replaceFragment(AddHabitFragment())
+                }
+
+                R.id.action_myhabits -> {
+                    replaceFragment(MyHabitsFragment())
+                }
+
+                R.id.action_profile -> {
+                    replaceFragment(ProfileFragment())
+                }
+
+            }
+
+            true
+
+        }
+
+        bottomNav.selectedItemId = R.id.action_myhabits
+
+    }
+
+    private fun animateHeaderFooter() {
 
         findViewById<View>(R.id.title).translationY = -600f
         findViewById<View>(R.id.header_bg).translationY = -600f
@@ -40,40 +81,29 @@ class MainActivity : AppCompatActivity() {
             start()
         }
 
+    }
 
-        bottomNav = findViewById(R.id.bottom_navigation)
+    fun showBackButton(fragment: Fragment) {
 
-        bottomNav.setOnItemSelectedListener { item ->
+        findViewById<View>(R.id.main_btn_back).visibility = View.VISIBLE
+        findViewById<View>(R.id.btn_back_bg).visibility = View.VISIBLE
 
-            when(item.itemId) {
-
-                R.id.action_myhabits -> {
-                    replaceFragment(MyHabitsFragment())
-                }
-
-                R.id.action_addhabit -> {
-                    replaceFragment(AddHabitFragment())
-                }
-
-                R.id.action_home -> {
-                    replaceFragment(SettingsFragment())
-                }
-
-                R.id.action_feed -> {
-                    replaceFragment(MyHabitsFragment())
-                }
-
-                R.id.action_profile -> {
-                    replaceFragment(ProfileFragment())
-                }
-
-            }
-
-            true
-
+        findViewById<CustomAppButton>(R.id.main_btn_back).setAction {
+            replaceFragment(fragment)
+            hideBackButton()
         }
 
-        bottomNav.selectedItemId = R.id.action_home
+    }
+
+    private fun hideBackButton() {
+        findViewById<View>(R.id.main_btn_back).visibility = View.GONE
+        findViewById<View>(R.id.btn_back_bg).visibility = View.GONE
+    }
+
+    private fun hideKeyboard() {
+
+        val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(window.decorView.windowToken, 0)
 
     }
 

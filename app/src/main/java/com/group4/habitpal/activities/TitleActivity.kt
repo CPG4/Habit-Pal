@@ -1,12 +1,13 @@
 package com.group4.habitpal.activities
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
 import com.group4.habitpal.R
 import com.group4.habitpal.custom_views.CustomAppButton
@@ -23,6 +24,11 @@ class TitleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_title)
 
+        findViewById<View>(R.id.title_screen).setOnClickListener { view ->
+            view.clearFocus()
+            hideKeyboard()
+        }
+
         hideBackButton()
 
         findViewById<CustomAppButton>(R.id.btn_login).setAction {
@@ -33,7 +39,7 @@ class TitleActivity : AppCompatActivity() {
             goToScreen(SignUpFragment())
         }
 
-        findViewById<CustomAppButton>(R.id.btn_back).setAction {
+        findViewById<CustomAppButton>(R.id.title_btn_back).setAction {
             showTitle()
         }
 
@@ -58,12 +64,12 @@ class TitleActivity : AppCompatActivity() {
     }
 
     private fun showBackButton() {
-        findViewById<View>(R.id.btn_back).visibility = View.VISIBLE
+        findViewById<View>(R.id.title_btn_back).visibility = View.VISIBLE
         findViewById<View>(R.id.btn_back_bg).visibility = View.VISIBLE
     }
 
     private fun hideBackButton() {
-        findViewById<View>(R.id.btn_back).visibility = View.GONE
+        findViewById<View>(R.id.title_btn_back).visibility = View.GONE
         findViewById<View>(R.id.btn_back_bg).visibility = View.GONE
     }
 
@@ -77,6 +83,13 @@ class TitleActivity : AppCompatActivity() {
         currentScreen = fragment
 
         hideTitle()
+
+    }
+
+    private fun hideKeyboard() {
+
+        val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(window.decorView.windowToken, 0)
 
     }
 

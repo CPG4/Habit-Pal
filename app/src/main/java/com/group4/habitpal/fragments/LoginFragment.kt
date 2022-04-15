@@ -1,7 +1,6 @@
 package com.group4.habitpal.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,7 +25,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val titleActivity = requireActivity() as TitleActivity
-        val btnLogin = titleActivity.findViewById<CustomAppButton>(R.id.btn_login_frag)
+        val btnLogin = titleActivity.findViewById<CustomAppButton>(R.id.loginfrag_btn_login)
 
         btnLogin.setAction {
             titleActivity.goToHomeScreen()

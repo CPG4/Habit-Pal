@@ -27,6 +27,8 @@ class SettingsFragment : Fragment() {
 
         val mainActivity = requireActivity() as MainActivity
 
+        mainActivity.showBackButton(ProfileFragment())
+
     }
 
 

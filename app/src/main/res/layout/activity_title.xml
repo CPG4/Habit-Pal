@@ -182,12 +182,13 @@
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginTop="5dp"
+        android:visibility="gone"
         app:cardBackgroundColor="@color/colorSettings"
         app:cardCornerRadius="50dp"
         app:cardElevation="10dp"
-        app:layout_constraintEnd_toEndOf="@id/btn_back"
-        app:layout_constraintStart_toStartOf="@id/btn_back"
-        app:layout_constraintTop_toTopOf="@id/btn_back">
+        app:layout_constraintEnd_toEndOf="@id/title_btn_back"
+        app:layout_constraintStart_toStartOf="@id/title_btn_back"
+        app:layout_constraintTop_toTopOf="@id/title_btn_back">
 
         <ImageView
             android:layout_width="match_parent"
@@ -200,12 +201,13 @@
     </androidx.cardview.widget.CardView>
 
     <com.group4.habitpal.custom_views.CustomAppButton
-        android:id="@+id/btn_back"
+        android:id="@+id/title_btn_back"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_20sdp"
         android:tag="Back"
+        android:visibility="gone"
         app:cardBackgroundColor="@color/colorText"
         app:cardCornerRadius="50dp"
         app:cardElevation="10dp"

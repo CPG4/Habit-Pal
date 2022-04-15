@@ -3,27 +3,30 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/action_myhabits"
-        android:icon="@drawable/ic_baseline_list_alt_24"
-        android:title="@string/my_habits"
-        app:showAsAction="ifRoom" />
-    <item
         android:id="@+id/action_addhabit"
         android:icon="@drawable/ic_baseline_add_24"
         android:title="@string/add_habit"
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/action_myhabits"
+        android:icon="@drawable/ic_baseline_list_alt_24"
+        android:title="@string/my_habits"
+        app:showAsAction="ifRoom" />
+
+<!--
+    <item
         android:id="@+id/action_home"
         android:icon="@drawable/ic_baseline_home_24"
         android:title="@string/home"
         app:showAsAction="ifRoom" />
-
     <item
         android:id="@+id/action_feed"
         android:icon="@drawable/ic_baseline_forum_24"
         android:title="@string/feed"
         app:showAsAction="ifRoom" />
+-->
+
     <item
         android:id="@+id/action_profile"
         android:icon="@drawable/ic_baseline_person_24"
