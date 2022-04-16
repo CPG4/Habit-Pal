@@ -24,10 +24,12 @@ Helps an individual track their progress towards breaking bad habits and/or form
 
 - [ ] User can register with their email address.
 - [ ] User can log in to access their habits.
+- [x] User can navigate from screen to screen using a bottom navigation bar.
 - [ ] User can create a new habit to track - based off of suggestions, or from scratch. They can specify whether this is a habit they would like to form or break.
 - [ ] User can set milestones/goals (21 days recommended)
 - [ ] User can set push-notification reminders for each habit they're tracking.
 - [ ] User can edit their habit name, milestones/goals, and reminders for each habit.
+
 
 **Optional Nice-to-have Stories**
 
