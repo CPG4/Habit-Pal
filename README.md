@@ -28,6 +28,7 @@ Helps an individual track their progress towards breaking bad habits and/or form
 - [ ] User can set milestones/goals (21 days recommended)
 - [ ] User can set push-notification reminders for each habit they're tracking.
 - [ ] User can edit their habit name, milestones/goals, and reminders for each habit.
+- [x] User can navigate from screen to screen using a bottom navigation bar.
 
 **Optional Nice-to-have Stories**
 
