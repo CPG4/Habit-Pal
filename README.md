@@ -24,10 +24,12 @@ Helps an individual track their progress towards breaking bad habits and/or form
 
 - [ ] User can register with their email address.
 - [ ] User can log in to access their habits.
+- [x] User can navigate from screen to screen using a bottom navigation bar.
 - [ ] User can create a new habit to track - based off of suggestions, or from scratch. They can specify whether this is a habit they would like to form or break.
 - [ ] User can set milestones/goals (21 days recommended)
 - [ ] User can set push-notification reminders for each habit they're tracking.
 - [ ] User can edit their habit name, milestones/goals, and reminders for each habit.
+
 
 **Optional Nice-to-have Stories**
 
@@ -74,8 +76,12 @@ Helps an individual track their progress towards breaking bad habits and/or form
 ## Wireframe
 <img src="https://i.ibb.co/30k59dV/IMG-20220408-182542825.jpg" width=800><br>
 
-## Digital Wireframes
-<img src="https://i.ibb.co/hZbm1hh/Screenshot-20220409-113259-794.png" width=200> <img src="https://i.ibb.co/4m6RtSq/Screenshot-20220409-113355-330.png" width=200> <img src="https://i.ibb.co/Zh3YR6d/Screenshot-20220409-113433-726.png" width=200> <img src="https://i.ibb.co/FnvJmt6/Screenshot-20220409-113542-083.png" width=200> <img src="https://i.ibb.co/4JvcYyQ/Screenshot-20220409-113643-389.png" width=200> <img src="https://i.ibb.co/t3n84yC/Screenshot-20220409-113716-200.png" width=200>
+## Digital Wireframes & Mockups
+<img src="https://i.imgur.com/uDpWQs3.png" width=200> <img src="https://i.imgur.com/FZFYkcN.png" width=200> <img src="https://i.imgur.com/IaMSv0q.png" width=200> <img src="https://i.imgur.com/RvtD6I4.png" width=200> <img src="https://i.imgur.com/OQD4M5u.png" width=200> <img src="https://i.imgur.com/0FxdQve.png" width=200> <img src="https://i.imgur.com/FlYkOG2.png" width=200> <img src="https://i.imgur.com/lNVDxfY.png" width=200> <img src="https://i.imgur.com/6yIyao8.png" width=200> <img src="https://i.imgur.com/IndzoCi.png" width=200> <img src="https://i.imgur.com/2uckhVO.png" width=200>
+
+## Interactive Prototypes
+<a href="https://youtube.com/shorts/pe__cLLI5xU">Week 6 Prototype</a><br>
+<a href="http://www.youtube.com/watch?v=Rb9FyHCTW9I">Week 7 Prototype</a>
 
 ## Schema
 

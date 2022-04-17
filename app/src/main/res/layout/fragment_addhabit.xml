@@ -77,7 +77,7 @@
             app:layout_constraintTop_toTopOf="@+id/btn_form">
 
             <TextView
-                android:id="@+id/text_quit"
+                android:id="@+id/text_break"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#00FFFFFF"
@@ -86,7 +86,7 @@
                 android:letterSpacing="0.05"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                android:text="@string/quit"
+                android:text="@string/_break"
                 android:textAllCaps="true"
                 android:textColor="@color/colorText"
                 android:textSize="18sp"

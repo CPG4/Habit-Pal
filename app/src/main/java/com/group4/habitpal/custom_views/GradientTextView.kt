@@ -28,8 +28,8 @@ class GradientTextView : AppCompatTextView {
         if (changed) {
             paint.shader = LinearGradient(
                 0f, 0f, measuredWidth.toFloat(), measuredHeight.toFloat(),
-                resources.getColor(R.color.colorPrimary2),
-                resources.getColor(R.color.colorPrimary),
+                resources.getColor(R.color.colorPrimary2, null),
+                resources.getColor(R.color.colorPrimary, null),
                 Shader.TileMode.CLAMP
             )
         }

@@ -36,6 +36,7 @@
     <string name="new_password">New Password</string>
     <string name="new_password_again">New Password Again</string>
     <string name="change_password">Change Password</string>
+    <string name="_break">Break</string>
     <string-array name="languages">
         <item>English</item>
         <item>Spanish</item>
