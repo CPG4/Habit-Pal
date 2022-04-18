@@ -88,13 +88,13 @@ Helps an individual track their progress towards breaking bad habits and/or form
 **User:**
 | Property      | Type           | Description                                  |
 | ------------- |:-------------: | -----                                       |
-| user_id       | Int            | Unique identifier                            |
+| id       | String           | User id (Unique identifier)                            |
 | email         | String         | Email address                                |
 | first_name    | String         | First name                                   |
 | last_name     | String         | Last name                                    |
-| phone         | String         | Phone number                                 |
+| phone_number         | String         | Phone number                                 |
 | date_of_birth | Date           | Date of birth                                |
-| avatar        | Url (image)    | Avatar image                                 |
+| avatar        | Parse file (image)    | Avatar (image)                                 |
 | habit_score   | Int            | Score attained via reaching goals/milestones |
 
 
