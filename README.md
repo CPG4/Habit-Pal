@@ -98,7 +98,7 @@ Helps an individual track their progress towards breaking bad habits and/or form
 | habit_score   | Int            | Score attained via reaching goals |
 
 
-**Habit:**
+**Habit:** 
 | Property      | Type           | Description                                                  |
 | ------------- |:-------------: | -----                                                        |
 | id            | String            | Habit id (Unique identifier                               |
