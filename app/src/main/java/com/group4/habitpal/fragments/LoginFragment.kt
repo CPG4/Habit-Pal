@@ -33,14 +33,14 @@ class LoginFragment : Fragment() {
 
 
         btnLogin.setOnClickListener {
-            val username = view.findViewById<EditText>(R.id.field_email).text.toString()
+            val email = view.findViewById<EditText>(R.id.field_email).text.toString()
             val password = view.findViewById<EditText>(R.id.field_password).text.toString()
-            loginUser(username, password)
+            loginUser(email, password)
         }
     }
 
-    private fun loginUser(username: String, password: String) {
-        ParseUser.logInInBackground(username, password, ({ user, e ->
+    private fun loginUser(email: String, password: String) {
+        ParseUser.logInInBackground(email, password, ({ user, e ->
             if (user != null) {
                 // Hooray!  The user is logged in.
                 Toast.makeText(requireContext(), "Successfully logged in!", Toast.LENGTH_SHORT).show()
