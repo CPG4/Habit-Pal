@@ -88,25 +88,25 @@ Helps an individual track their progress towards breaking bad habits and/or form
 **User:**
 | Property      | Type           | Description                                  |
 | ------------- |:-------------: | -----                                       |
-| user_id       | Int            | Unique identifier                            |
+| id       | String           | User id (Unique identifier)                            |
 | email         | String         | Email address                                |
 | first_name    | String         | First name                                   |
 | last_name     | String         | Last name                                    |
-| phone         | String         | Phone number                                 |
+| phone_number         | String         | Phone number                                 |
 | date_of_birth | Date           | Date of birth                                |
-| avatar        | Url (image)    | Avatar image                                 |
-| habit_score   | Int            | Score attained via reaching goals/milestones |
+| avatar        | Parse file (image)    | Avatar (image)                                 |
+| habit_score   | Int            | Score attained via reaching goals |
 
 
-**Habit:**
+**Habit:** 
 | Property      | Type           | Description                                                  |
 | ------------- |:-------------: | -----                                                        |
-| id            | Int            | Unique identifier                                            |
-| user_id       | Int            | Unique *user* identifier                                     |
-| name          | String         | Name                                                         |
-| type          | String         | Good vs. Bad                                                 |
-| reminders     | Boolean        | Whether the user wants reminder notifications for the habit  |
+| id            | String            | Habit id (Unique identifier                               |
+| user       | User            | User that created the habit (Pointer to User class)                                    |
+| name          | String         | Name of habit                                                        |
+| type          | String         | Type of habit (Good vs. Bad)                                                 |
+| reminders     | Boolean        | Whether the user wants reminder notifications for the habit or not  |
 | goal          | Int            | How many days the user wants to track habit                  |
 | milestone     | Int            | What frequency of days would count as a milestone            |
-| image         | Url (image)    | Image (optional)                                             |
+| image         | Parse file (image)    | Habit Image                                            |
 | points        | Int            | Points added to users habit score for completion             |
