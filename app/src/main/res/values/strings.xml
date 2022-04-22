@@ -37,6 +37,9 @@
     <string name="new_password_again">New Password Again</string>
     <string name="change_password">Change Password</string>
     <string name="_break">Break</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <string name="back4app_app_id">qMhDKVHmsg3GJ01zd9OBbk7p3Y3m9WyRPAZOoC6r</string>
+    <string name="back4app_client_key">zt3UJMjLiOlIzW8vtSbjNaPD76KsrVfjduEJSxtG</string>
     <string-array name="languages">
         <item>English</item>
         <item>Spanish</item>

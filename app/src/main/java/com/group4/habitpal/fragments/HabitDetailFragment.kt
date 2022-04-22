@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.group4.habitpal.Habit
+import com.group4.habitpal.models.Habit
 import com.group4.habitpal.R
 import com.group4.habitpal.activities.MainActivity
 
