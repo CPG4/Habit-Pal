@@ -1,4 +1,13 @@
 <resources>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Back4App -->
+    <string name="back4app_app_id">5U9qKwkRSWcMuA8M17RchV5T74fAhReHdLXubgAC</string>
+    <string name="back4app_client_key">tjJ3ZdugCqYOFNmAy1uQ174aLye3ATaaqALesi4M</string>
+    <!-- Back4App -->
+
+
     <string name="app_name">Habit Pal</string>
     <string name="title">Habit Pal</string>
     <string name="log_in">Log In</string>
