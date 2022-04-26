@@ -71,7 +71,7 @@ class SignUpFragment : Fragment() {
                 // to figure out what went wrong
                 e.printStackTrace()
                 //TODO: Find out why this error toast keeps appearing
-                Toast.makeText(requireContext(), "Error signing up!", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(requireContext(), "Error signing up!", Toast.LENGTH_SHORT).show()
             }
         }
     }
