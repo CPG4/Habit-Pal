@@ -43,14 +43,16 @@ class SignUpFragment : Fragment() {
 
 //            val dateFormatter = SimpleDateFormat("yyyy-MM-dd")
 //            val dob = dateFormatter.parse(view.findViewById<EditText>(R.id.field_email).text.toString())
-            val dob = "dummyData"
+//            val dob = "dummyData"
 
-            signUpUser(name, email, password)
+            val dateOfBirth = Date(titleActivity.findViewById<EditText>(R.id.signup_field_dob).text.toString())
+
+            signUpUser(name, email, password, dateOfBirth)
         }
 
     }
 
-    private fun signUpUser(name: String, email: String, password: String){
+    private fun signUpUser(name: String, email: String, password: String, dateOfBirth: Date){
         // Create the ParseUser
         val user = ParseUser()
 
@@ -58,6 +60,7 @@ class SignUpFragment : Fragment() {
         user.setUsername(email)
         user.setPassword(password)
         user.setEmail(email)
+        user.put("date_of_birth", dateOfBirth)
 
         user.signUpInBackground { e ->
             if (e == null) {
