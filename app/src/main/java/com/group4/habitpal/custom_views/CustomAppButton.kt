@@ -38,7 +38,8 @@ class CustomAppButton : MaterialCardView {
     // is a tag defined
     var performAction: () -> Unit = fun() {
         if(this.tag != null) {
-            Toast.makeText(context, this.tag.toString(), Toast.LENGTH_SHORT).show()
+//            Commenting for now to test login
+//            Toast.makeText(context, this.tag.toString(), Toast.LENGTH_SHORT).show()
         }
     }
 
