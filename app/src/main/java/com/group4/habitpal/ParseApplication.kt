@@ -8,6 +8,8 @@ class ParstagramApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
+        ParseObject.registerSubclass(Habit::class.java)
+
         Parse.initialize(
             Parse.Configuration.Builder(this)
                 .applicationId(getString(R.string.back4app_app_id))
