@@ -43,7 +43,7 @@ class LoginFragment : Fragment() {
         ParseUser.logInInBackground(email, password, ({ user, e ->
             if (user != null) {
                 // Hooray!  The user is logged in.
-                Toast.makeText(requireContext(), "Successfully logged in!", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(requireContext(), "Successfully logged in!", Toast.LENGTH_SHORT).show()
                 Log.i(TAG, "Successfully logged in user!")
                 val titleActivity = requireActivity() as TitleActivity
                 titleActivity.goToHomeScreen()
