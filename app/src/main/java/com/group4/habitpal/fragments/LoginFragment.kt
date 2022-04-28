@@ -36,6 +36,7 @@ class LoginFragment : Fragment() {
             val email = view.findViewById<EditText>(R.id.field_email).text.toString()
             val password = view.findViewById<EditText>(R.id.field_password).text.toString()
             loginUser(email, password)
+            btnLogin.isEnabled = false
         }
     }
 

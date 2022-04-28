@@ -48,6 +48,7 @@ class SignUpFragment : Fragment() {
             val dateOfBirth = Date(titleActivity.findViewById<EditText>(R.id.signup_field_dob).text.toString())
 
             signUpUser(name, email, password, dateOfBirth)
+            btnSignUp.isEnabled = false
         }
 
     }

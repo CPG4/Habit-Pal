@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.group4.habitpal.Habit
 import com.group4.habitpal.R
+import com.group4.habitpal.activities.MainActivity
 import com.group4.habitpal.activities.TitleActivity
 import com.group4.habitpal.custom_views.CustomAppButton
 import com.parse.ParseUser
@@ -36,6 +37,7 @@ class AddHabitFragment : Fragment() {
             val type = "form"
             val goal = 21
             submitPost(name, user, type, goal)
+            view.findViewById<CustomAppButton>(R.id.btn_add).isEnabled = false
         }
     }
 
@@ -56,8 +58,8 @@ class AddHabitFragment : Fragment() {
                 Toast.makeText(requireContext(), "Error saving habit!", Toast.LENGTH_SHORT).show()
             } else {
                 Log.i(TAG, "Successfully saved habit")
-//                val titleActivity = requireActivity() as TitleActivity
-//                titleActivity.goToHomeScreen()
+                val mainActivity = requireActivity() as MainActivity
+                mainActivity.replaceFragment(MyHabitsFragment())
             }
         }
     }
