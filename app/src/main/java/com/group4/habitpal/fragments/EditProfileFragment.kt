@@ -5,8 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import com.group4.habitpal.R
 import com.group4.habitpal.activities.MainActivity
+import com.group4.habitpal.custom_views.CustomAppButton
+import com.group4.habitpal.custom_views.CustomEditTextContainer
+import com.parse.ParseUser
 
 class EditProfileFragment : Fragment() {
 
@@ -24,7 +28,25 @@ class EditProfileFragment : Fragment() {
 
         val mainActivity = requireActivity() as MainActivity
 
+        mainActivity.findViewById<EditText>(R.id.editprofile_field_name).hint = ParseUser().getUsername()
+        mainActivity.findViewById<EditText>(R.id.editprofile_field_email).hint = ParseUser().getEmail()
+        //mainActivity.findViewById<EditText>(R.id.editprofile_field_dob).hint = ParseUser().getdate_of_birth()
+
+        val username = mainActivity.findViewById<EditText>(R.id.editprofile_field_name).text.toString()
+        val email = mainActivity.findViewById<EditText>(R.id.editprofile_field_email).text.toString()
+        val dob = mainActivity.findViewById<EditText>(R.id.editprofile_field_dob).text.toString()
+        val btnSaveInformation = mainActivity.findViewById<CustomAppButton>(R.id.btn_applychanges)
+
+
         mainActivity.showBackButton(MyProfileFragment())
+
+        btnSaveInformation.setAction {
+            ParseUser().setUsername(username)
+            ParseUser().setEmail(email)
+            //ParseUser().setdate_of_birth(dob)
+            mainActivity.replaceFragment(MyProfileFragment())
+        }
+
 
     }
 
