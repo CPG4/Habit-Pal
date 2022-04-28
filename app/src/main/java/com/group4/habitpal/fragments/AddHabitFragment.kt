@@ -40,7 +40,7 @@ class AddHabitFragment : Fragment() {
     }
 
     //send a Habit object to our parse server
-    private fun submitPost(name: String, user: ParseUser, type: String, goal: Number) {
+    private fun submitPost(name: String, user: ParseUser, type: String, goal: Int) {
         //create the Habit object
         Log.i(TAG, "SubmitPost function started...")
         val habit = Habit()
