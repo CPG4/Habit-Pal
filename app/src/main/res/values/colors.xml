@@ -18,4 +18,5 @@
     <color name="colorEditTextShadow">#330D0D4E</color>
     <color name="colorEditTextBGUnfocused">#550D0D4E</color>
     <color name="buttonColorOutline">#55FDFEFD</color>
+    <color name="white">#FFFFFF</color>
 </resources>

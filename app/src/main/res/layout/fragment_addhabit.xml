@@ -50,7 +50,7 @@
             app:layout_constraintStart_toStartOf="@+id/text_type"
             app:layout_constraintTop_toBottomOf="@+id/text_type">
 
-            <TextView
+            <Button
                 android:id="@+id/text_form"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -63,24 +63,27 @@
                 android:textAllCaps="true"
                 android:textColor="@color/colorTextDark"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:backgroundTint="@android:color/transparent"
+                android:stateListAnimator="@null"
+                style="?android:attr/borderlessButtonStyle"
+                />
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/btn_quit"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_50sdp"
-            app:cardBackgroundColor="#0082C22E"
+            app:cardBackgroundColor="@color/colorText"
             app:cardCornerRadius="30dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="@+id/text_type"
             app:layout_constraintTop_toTopOf="@+id/btn_form">
 
-            <TextView
+            <Button
                 android:id="@+id/text_break"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#00FFFFFF"
                 android:fontFamily="@font/nova_round"
                 android:gravity="center"
                 android:letterSpacing="0.05"
@@ -88,9 +91,13 @@
                 android:paddingEnd="20dp"
                 android:text="@string/_break"
                 android:textAllCaps="true"
-                android:textColor="@color/colorText"
+                android:textColor="@color/colorTextDark"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:backgroundTint="@android:color/transparent"
+                android:stateListAnimator="@null"
+                style="?android:attr/borderlessButtonStyle"
+                />
         </com.google.android.material.card.MaterialCardView>
 
         <TextView

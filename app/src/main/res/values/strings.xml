@@ -29,6 +29,8 @@
     <string name="progress">Progress</string>
     <string name="description">Description</string>
     <string name="habit_type_header">I have a habit to…</string>
+    <string name="habit_type_header_form">I have a habit to form:</string>
+    <string name="habit_type_header_break">I have a habit to break:</string>
     <string name="habit_describe_hint">Describe the habit</string>
     <string name="form">Form</string>
     <string name="quit">Quit</string>

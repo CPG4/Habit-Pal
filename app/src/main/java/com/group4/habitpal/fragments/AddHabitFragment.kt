@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import com.google.android.material.card.MaterialCardView
 import com.group4.habitpal.Habit
 import com.group4.habitpal.R
 import com.group4.habitpal.activities.MainActivity
@@ -29,12 +31,36 @@ class AddHabitFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //Form/Break habit button controls:
+
+        //Habit text:
+        val habitText: TextView = view.findViewById<TextView>(R.id.text_type)
+        var formOrBreak: String = "form"
+
+        //Form:
+        val btnForm: Button = view.findViewById<Button>(R.id.text_form)
+
+        //Break:
+        val btnBreak: Button = view.findViewById<Button>(R.id.text_break)
+
+        //Form onClick:
+        btnForm.setOnClickListener {
+            habitText.text = resources.getText(R.string.habit_type_header_form)
+            formOrBreak = "Form"
+        }
+
+        //Break onClick:
+        btnBreak.setOnClickListener {
+            habitText.text = resources.getText(R.string.habit_type_header_break)
+            formOrBreak = "Break"
+        }
+
         // get data that user has inputted
         // for now it will only be habits to form, and goal will be 21 days
         view.findViewById<CustomAppButton>(R.id.btn_add).setOnClickListener {
             val name = view.findViewById<EditText>(R.id.field_description).text.toString()
             val user = ParseUser.getCurrentUser()
-            val type = "form"
+            val type = formOrBreak
             val goal = 21
             submitPost(name, user, type, goal)
             view.findViewById<CustomAppButton>(R.id.btn_add).isEnabled = false
