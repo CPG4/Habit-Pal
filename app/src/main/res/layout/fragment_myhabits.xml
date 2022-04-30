@@ -987,7 +987,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="14/21"
+                            android:text="0/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
