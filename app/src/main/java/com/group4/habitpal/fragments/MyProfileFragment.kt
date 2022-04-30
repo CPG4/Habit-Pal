@@ -51,12 +51,12 @@ class MyProfileFragment : Fragment() {
 
         val mainActivity = requireActivity() as MainActivity
 
-        mainActivity.findViewById<TextView>(R.id.text_name).text = ParseUser().getUsername()
+        mainActivity.findViewById<TextView>(R.id.text_name).text = ParseUser.getCurrentUser().getUsername()
 
         val btnEditProfile = mainActivity.findViewById<CustomAppButton>(R.id.btn_editprofile)
         val btnChangePassword = mainActivity.findViewById<CustomAppButton>(R.id.btn_changepassword)
         val btnChangePicture = mainActivity.findViewById<MaterialCardView>(R.id.profile_pic_container)
-        avatar = mainActivity.findViewById(R.id.profile_pic_placeholder)
+        avatar = mainActivity.findViewById(R.id.profile_pic)
 
 
         mainActivity.showBackButton(ProfileFragment())

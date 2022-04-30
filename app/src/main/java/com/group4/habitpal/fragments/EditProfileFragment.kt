@@ -6,11 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.Toast
 import com.group4.habitpal.R
 import com.group4.habitpal.activities.MainActivity
 import com.group4.habitpal.custom_views.CustomAppButton
 import com.group4.habitpal.custom_views.CustomEditTextContainer
 import com.parse.ParseUser
+import java.util.*
 
 class EditProfileFragment : Fragment() {
 
@@ -28,9 +30,9 @@ class EditProfileFragment : Fragment() {
 
         val mainActivity = requireActivity() as MainActivity
 
-        mainActivity.findViewById<EditText>(R.id.editprofile_field_name).hint = ParseUser().getUsername()
-        mainActivity.findViewById<EditText>(R.id.editprofile_field_email).hint = ParseUser().getEmail()
-        //mainActivity.findViewById<EditText>(R.id.editprofile_field_dob).hint = ParseUser().getdate_of_birth()
+        mainActivity.findViewById<EditText>(R.id.editprofile_field_name).hint = ParseUser.getCurrentUser().getUsername()
+        mainActivity.findViewById<EditText>(R.id.editprofile_field_email).hint = ParseUser.getCurrentUser().getEmail()
+        mainActivity.findViewById<EditText>(R.id.editprofile_field_dob).hint = ParseUser.getCurrentUser().get("date_of_birth").toString()
 
         val username = mainActivity.findViewById<EditText>(R.id.editprofile_field_name).text.toString()
         val email = mainActivity.findViewById<EditText>(R.id.editprofile_field_email).text.toString()
@@ -41,9 +43,9 @@ class EditProfileFragment : Fragment() {
         mainActivity.showBackButton(MyProfileFragment())
 
         btnSaveInformation.setAction {
-            ParseUser().setUsername(username)
-            ParseUser().setEmail(email)
-            //ParseUser().setdate_of_birth(dob)
+            ParseUser.getCurrentUser().setUsername(username)
+            ParseUser.getCurrentUser().setEmail(email)
+            ParseUser.getCurrentUser().put("date_of_birth", dob)
             mainActivity.replaceFragment(MyProfileFragment())
         }
 

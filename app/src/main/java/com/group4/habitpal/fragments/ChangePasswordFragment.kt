@@ -35,11 +35,11 @@ class ChangePasswordFragment : Fragment() {
         mainActivity.showBackButton(MyProfileFragment())
 
         /*btnSavePassword.setOnClickListener {
-            if((currentPassword == ParseUser().getPassword()) && (newPassword == newPasswordConfirmation)) {
-                ParseUser().setPassword(newPassword)
-            }
+             if((currentPassword == ParseUser.getCurrentUser().getPassword()) && (newPassword == newPasswordConfirmation)) {
+                 ParseUser().setPassword(newPassword)
+             }
 
-        }*/
+         }*/
 
 
     }
