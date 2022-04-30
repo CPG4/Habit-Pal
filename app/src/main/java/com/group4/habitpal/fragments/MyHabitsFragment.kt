@@ -43,21 +43,6 @@ class MyHabitsFragment : Fragment() {
                 mainActivity.replaceFragment(HabitDetailFragment(null))
             }
         }
-
-        // Define the class we would like to query
-        val query: ParseQuery<Habit> = ParseQuery.getQuery(Habit::class.java)
-        // Define our query conditions
-        query.whereEqualTo("user", ParseUser.getCurrentUser())
-        // Execute the find asynchronously
-        query.findInBackground { itemList, e ->
-            if (e == null) {
-                // Access the array of results here
-                val items: List<Habit> = itemList
-                Log.i(TAG, "First habit: " + items[0].getName())
-            } else {
-                Log.d("item", "Error: " + e.printStackTrace())
-            }
-        }
     }
 
     companion object {
