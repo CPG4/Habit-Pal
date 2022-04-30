@@ -217,7 +217,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Form"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -228,7 +228,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Go to the gym"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -239,7 +239,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -261,7 +261,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Form"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -272,7 +272,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Study for an hour"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -283,7 +283,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -305,7 +305,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Form"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -316,7 +316,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Practice leetcode"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -327,7 +327,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -349,7 +349,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Form"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -360,7 +360,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Go for a run"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -371,7 +371,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -393,7 +393,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Form"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -404,7 +404,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Wake up at 8am"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -415,7 +415,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -437,7 +437,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Form"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -448,7 +448,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Go to sleep at 10pm"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -459,7 +459,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -481,7 +481,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Break"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -492,7 +492,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Ordering out for dinner"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -503,7 +503,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -525,7 +525,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Break"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -536,7 +536,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Watching TV an hour before bed"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -547,7 +547,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -569,7 +569,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Break"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -580,7 +580,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Playing video games"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -591,7 +591,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -613,7 +613,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Break"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -624,7 +624,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Drinking coffee"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -635,7 +635,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -657,7 +657,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Break"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -668,7 +668,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Complaining"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -679,7 +679,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -701,7 +701,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Break"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -712,7 +712,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Procrastinating deadlines"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -723,7 +723,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -745,7 +745,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Break"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -756,7 +756,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Using swear words"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -767,7 +767,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -789,7 +789,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Break"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -800,7 +800,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Using 'um' and 'like'"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -811,7 +811,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -833,7 +833,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Break"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -844,7 +844,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Drinking alcohol"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -855,7 +855,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -877,7 +877,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Break"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -888,7 +888,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Using social media for more than an hour"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -899,7 +899,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -921,7 +921,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Break"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -932,7 +932,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Smoking cigarettes"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -943,7 +943,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -965,7 +965,7 @@
                             android:layout_weight="1.5"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Type"
+                            android:text="Break"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -976,7 +976,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="Habit"
+                            android:text="Drinking soda"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -987,7 +987,7 @@
                             android:layout_weight="1.25"
                             android:fontFamily="@font/nova_round"
                             android:gravity="center"
-                            android:text="0/30"
+                            android:text="14/21"
                             android:textColor="@color/colorTextDark"
                             android:textSize="18sp"
                             android:textStyle="bold" />

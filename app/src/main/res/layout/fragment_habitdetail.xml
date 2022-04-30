@@ -27,7 +27,7 @@
         android:shadowColor="@color/colorShadow"
         android:shadowDy="5"
         android:shadowRadius="10"
-        android:text="69%"
+        android:text="66%"
         android:textColor="@color/colorText"
         android:textSize="55sp"
         android:textStyle="bold"
