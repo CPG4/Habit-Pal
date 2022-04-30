@@ -82,6 +82,7 @@ Helps an individual track their progress towards breaking bad habits and/or form
 ## Interactive Prototypes
 <a href="https://youtube.com/shorts/pe__cLLI5xU">Week 6 Prototype</a><br>
 <a href="http://www.youtube.com/watch?v=Rb9FyHCTW9I">Week 7 Prototype</a>
+<a href = "new walkthrough.gif">Profile Gif</a>
 
 ## Schema
 
