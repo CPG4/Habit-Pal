@@ -22,10 +22,10 @@ Helps an individual track their progress towards breaking bad habits and/or form
 
 **Required Must-have Stories**
 
-- [ ] User can register with their email address.
-- [ ] User can log in to access their habits.
+- [x] User can register with their email address.
+- [x] User can log in to access their habits.
 - [x] User can navigate from screen to screen using a bottom navigation bar.
-- [ ] User can create a new habit to track - based off of suggestions, or from scratch. They can specify whether this is a habit they would like to form or break.
+- [x] User can create a new habit to track - based off of suggestions, or from scratch. They can specify whether this is a habit they would like to form or break.
 - [ ] User can set milestones/goals (21 days recommended)
 - [ ] User can set push-notification reminders for each habit they're tracking.
 - [ ] User can edit their habit name, milestones/goals, and reminders for each habit.
@@ -81,7 +81,7 @@ Helps an individual track their progress towards breaking bad habits and/or form
 
 ## Interactive Prototypes
 <a href="https://youtube.com/shorts/pe__cLLI5xU">Week 6 Prototype</a><br>
-<a href="http://www.youtube.com/watch?v=Rb9FyHCTW9I">Week 7 Prototype</a>
+<a href="http://www.youtube.com/watch?v=Rb9FyHCTW9I">Week 7 Prototype</a><br>
 <a href = "new walkthrough.gif">Profile Gif</a>
 
 ## Schema
