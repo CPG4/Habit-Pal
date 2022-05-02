@@ -1,5 +1,6 @@
 package com.group4.habitpal.fragments
 
+import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -10,6 +11,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.card.MaterialCardView
 import com.group4.habitpal.Habit
 import com.group4.habitpal.R
@@ -55,6 +57,7 @@ class AddHabitFragment : Fragment() {
             formOrBreak = "Break"
         }
 
+
         // get data that user has inputted
         // for now it will only be habits to form, and goal will be 21 days
         view.findViewById<CustomAppButton>(R.id.btn_add).setOnClickListener {
@@ -64,11 +67,14 @@ class AddHabitFragment : Fragment() {
             val goal = 21
             submitPost(name, user, type, goal)
             view.findViewById<CustomAppButton>(R.id.btn_add).isEnabled = false
+            val bottomNav = (activity as MainActivity).findViewById<BottomNavigationView>(R.id.bottom_navigation)
+            bottomNav.selectedItemId = R.id.action_myhabits
         }
     }
 
     //send a Habit object to our parse server
     private fun submitPost(name: String, user: ParseUser, type: String, goal: Int) {
+
         //create the Habit object
         Log.i(TAG, "SubmitPost function started...")
         val habit = Habit()
