@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.group4.habitpal.activities.MainActivity
+import com.group4.habitpal.fragments.HabitDetailFragment
 
 class HabitAdapter(val context: Context, val habits:List<Habit>): RecyclerView.Adapter<HabitAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HabitAdapter.ViewHolder {
@@ -37,7 +39,7 @@ class HabitAdapter(val context: Context, val habits:List<Habit>): RecyclerView.A
         fun bind(habit: Habit) {
             tvType.text = habit.getType()
             tvDescription.text = habit.getName()
-            tvProgress.text = habit.getGoal().toString()
+            tvProgress.text = "14/" + habit.getGoal().toString()
         }
     }
 }
