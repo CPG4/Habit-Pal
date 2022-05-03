@@ -5,14 +5,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.constraintlayout.widget.ConstraintSet
-import androidx.core.view.children
+import android.widget.ScrollView
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.internal.ViewUtils.getContentView
 import com.group4.habitpal.Habit
 import com.group4.habitpal.HabitAdapter
 import com.group4.habitpal.R
@@ -26,6 +24,7 @@ import com.parse.ParseUser
 class MyHabitsFragment : Fragment() {
 
     lateinit var habitsRecyclerView: RecyclerView
+
 
     lateinit var adapter: HabitAdapter
 
@@ -44,8 +43,16 @@ class MyHabitsFragment : Fragment() {
 
         val mainActivity = requireActivity() as MainActivity
 
-//        val habitListIterator = mainActivity
-//            .findViewById<LinearLayout>(R.id.habitlist)
+        //Recyclerview implementation
+        habitsRecyclerView = view.findViewById(R.id.habitRecyclerView)
+
+        adapter = HabitAdapter(requireContext(), allHabits)
+        habitsRecyclerView.adapter = adapter
+        habitsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        queryHabits()
+
+//        val habitListIterator = habitsRecyclerView
 //            .children
 //            .iterator()
 //
@@ -55,14 +62,6 @@ class MyHabitsFragment : Fragment() {
 //            }
 //        }
 
-        //Recyclerview implementation
-        habitsRecyclerView = view.findViewById(R.id.habitRecyclerView)
-
-        adapter = HabitAdapter(requireContext(), allHabits)
-        habitsRecyclerView.adapter = adapter
-        habitsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-
-        queryHabits()
     }
 
     fun queryHabits() {

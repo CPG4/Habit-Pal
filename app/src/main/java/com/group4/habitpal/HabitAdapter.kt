@@ -39,7 +39,7 @@ class HabitAdapter(val context: Context, val habits:List<Habit>): RecyclerView.A
         fun bind(habit: Habit) {
             tvType.text = habit.getType()
             tvDescription.text = habit.getName()
-            tvProgress.text = "14/" + habit.getGoal().toString()
+            tvProgress.text = "0/" + habit.getGoal().toString()
         }
     }
 }

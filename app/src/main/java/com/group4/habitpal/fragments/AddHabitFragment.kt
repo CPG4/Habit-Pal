@@ -37,6 +37,7 @@ class AddHabitFragment : Fragment() {
 
         //Habit text:
         val habitText: TextView = view.findViewById<TextView>(R.id.text_type)
+        val habitDesc: TextView = view.findViewById<TextView>(R.id.text_description)
         var formOrBreak: String = "form"
 
         //Form:
@@ -48,12 +49,14 @@ class AddHabitFragment : Fragment() {
         //Form onClick:
         btnForm.setOnClickListener {
             habitText.text = resources.getText(R.string.habit_type_header_form)
+            habitDesc.text = "I want to start..."
             formOrBreak = "Form"
         }
 
         //Break onClick:
         btnBreak.setOnClickListener {
             habitText.text = resources.getText(R.string.habit_type_header_break)
+            habitDesc.text = "I want to stop..."
             formOrBreak = "Break"
         }
 
